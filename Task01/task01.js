@@ -16,10 +16,7 @@ function isUnique(str) {
     return;
   }
 
-  const strArr =  [];
-  for (let i = 0, len = str.length; i < len; i++) {
-    strArr.push(str[i]);
-  }
+  const strArr = str.split('');
 
   for (let i = 0; i < strArr.length; i++) {
     for (let j = i + 1; j < strArr.length; j++) {
