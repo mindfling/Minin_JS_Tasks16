@@ -14,7 +14,7 @@ function isUnique(str) {
 
   if (typeof str !== 'string') return;
 
-  const strArr = str.split('');
+  // const strArr = str.split('');
 
   // for (let i = 0; i < strArr.length; i++) {
   //   for (let j = i + 1; j < strArr.length; j++) {
@@ -24,15 +24,16 @@ function isUnique(str) {
   //   }
   // }
 
-  let strSet = new Set();
-  for (let i = 0; i < strArr.length; i++) { //?
-    if (strSet.has(strArr[i])) {
-      return false;
-    }
-    strSet.add(strArr[i]);
-  }
+  // let strSet = new Set();
+  // for (let i = 0; i < strArr.length; i++) { //?
+  //   if (strSet.has(strArr[i])) {
+  //     return false;
+  //   }
+  //   strSet.add(strArr[i]);
+  // }
 
-  return true;
+  // return true;
+  return (new Set(str)).size === str.length;
 }
 
 //tests
