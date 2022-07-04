@@ -12,18 +12,24 @@ console.log(isUnique('abcadef')) // -> false
 
 function isUnique(str) {
 
-  if (typeof str !== 'string') {
-    return;
-  }
+  if (typeof str !== 'string') return;
 
   const strArr = str.split('');
 
-  for (let i = 0; i < strArr.length; i++) {
-    for (let j = i + 1; j < strArr.length; j++) {
-      if (strArr[i] === strArr[j]) {
-        return false;
-      }
+  // for (let i = 0; i < strArr.length; i++) {
+  //   for (let j = i + 1; j < strArr.length; j++) {
+  //     if (strArr[i] === strArr[j]) {
+  //       return false;
+  //     }
+  //   }
+  // }
+
+  let strSet = new Set();
+  for (let i = 0; i < strArr.length; i++) { //?
+    if (strSet.has(strArr[i])) {
+      return false;
     }
+    strSet.add(strArr[i]);
   }
 
   return true;
@@ -32,7 +38,6 @@ function isUnique(str) {
 //tests
 console.log(isUnique('abcdef')) // -> true
 console.log(isUnique('abcABC')) // -> true
-console.log(isUnique('abcAde123')) // -> false
-console.log(isUnique( '1234987' )) // -> false
-console.log(isUnique( '1234981' )) // -> false
-console.log(isUnique( 1234987 )) // -> false
+console.log(isUnique('abcabc')) // -> false
+console.log(isUnique( '1231234' )) // -> false
+console.log(isUnique( 1231234 )) // -> undefined not string
