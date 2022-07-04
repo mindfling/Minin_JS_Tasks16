@@ -1,4 +1,8 @@
-## Minin_JS_Tasks16
+# Minin_JS_Tasks16
+
+## Links for articles
+https://vladilen.notion.site/JavaScript-473541d86991472fb844c5fa35d5dbf4
+https://youtu.be/x-EZy6gu_38
 
 ### …or create a new repository on the command line
 ```
